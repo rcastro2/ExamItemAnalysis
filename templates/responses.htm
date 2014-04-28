@@ -1,0 +1,32 @@
+{% extends "base.htm" %}
+
+{% block content %}
+
+<div id="students">
+<table>
+<caption>Students</caption>
+<tr><th>Entered</th><th>Missing</th></tr>
+<tr><td>
+{% for student in studentsin %}
+{{student.studentid}}<br/>
+{% endfor %}
+</td>
+<td>
+{% for student in studentsnotin %}
+{{student.studentid}}<br/>
+{% endfor %}
+</td>
+</tr></table>
+</div>
+
+<hr/>
+{% for number in range(1,41) %}
+<h3>Question {{ number }}</h3>
+A: {{results[number-1]['a']}} &nbsp; 
+B: {{results[number-1]['b']}} &nbsp; 
+C: {{results[number-1]['c']}} &nbsp; 
+D: {{results[number-1]['d']}} &nbsp; 
+E: {{results[number-1]['e']}}
+<hr/>
+{% endfor %}
+{% endblock %}

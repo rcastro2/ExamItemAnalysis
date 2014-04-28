@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<style type="text/css">
+*{font-family:Arial}
+#main-container{ text-align:center}
+#responses table{margin-left:auto;margin-right:auto;}
+#title {margin-left:auto;margin-right:auto;width:150px;color:white;background-color:blue;padding:5px;border-radius:5px;}
+#students{top: 0px;right: 0px; position: fixed; border: 1px solid;border-radius:5px;background-color:white;}
+input:invalid {
+  box-shadow: 0 0 5px 1px red;
+}
+</style>
+<script type="text/javascript">
+var count;
+$(document).ready(function(){
+	$("input").change(function() { /*alert(1) */} )
+
+
+})
+</script>
+</head>
+<title>AP Computer Science</title>
+<body>
+<div id="main-container">
+{% block content%}
+
+{% endblock %}
+</div>
+</body>
+</html>
